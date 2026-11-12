@@ -1,84 +1,109 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/c-nj_25d)
-# Assignment 2: Text classification
+# Twitter Gender Classification: NLP & Machine Learning
 
-**Deadline:** Jul 25, 2025
+A Natural Language Processing (NLP) and Machine Learning project focused on text classification using tweets from public figures.
 
-In this assignment, 
-we are interested in predicting the gender of an author from their tweets.
-The data for this assignments comes from
-a collabortive corpus collection effort from an earlier NLP class.
-Each data instance is a (somewhat old) tweet from a public figure.
+The project explores how linguistic patterns and text-based features can be used to build supervised machine learning models for author classification.
 
-You can find the data in your repository as two separate files.
-The file [nlp2-a2.train](nlp2-a2.train) contains the training instances,
-and the file [nlp2-a2.test](nlp2-a2.test) contains the test instances.
-Data is formatted as tab-separated files in both cases.
-The columns include:
+## Project Overview
 
-- column **1** the `id` of the instance (unique across train/test data)
-- column **2** the outcome variable, `gender` of the author.
-    The gender column in the test file is set to `_`
-- column **3** the text
+Text classification is a fundamental NLP task that involves assigning predefined categories to textual data.
 
-This time there are no numeric features.
-You are required to extract features from the text yourself.
-The provided baseline includes a simple example for simple linear classifiers.
+This project investigates the use of machine learning techniques to classify tweet authors based on their writing patterns and linguistic characteristics.
 
-Your task is to predict the gender of the authors in the test file,
-and write your predictions to a file formatted as a tab-separated file
-with two columns. The first column should be the id of the test instance
-and the second should be the prediction. The following is an example
-of the expected format.
+**Objective:** Build text classification models using feature extraction and supervised learning techniques.
 
+## Technical Skills & Technologies
+
+- **Programming:** Python
+- **Natural Language Processing:** Text preprocessing, tokenization, feature extraction
+- **Machine Learning:** Supervised learning, text classification
+- **Text Representation:** Bag-of-Words, TF-IDF
+- **Libraries:** Scikit-learn, Pandas, NumPy
+- **Development:** Git, GitHub
+
+## Dataset
+
+The project uses a collection of tweets from public figures.
+
+Each data instance contains:
+
+- Unique instance identifier
+- Classification target (gender label)
+- Tweet text
+
+The dataset is provided in tab-separated format and divided into training and test sets.
+
+## Project Structure
+
+```text
+twitter-gender-classification/
+│
+├── baseline.py
+├── a2-<method>.py
+├── nlp2-a2.train
+├── nlp2-a2.test
+├── a2-<method>.predictions
+├── README.md
+└── .gitignore
 ```
-id      gender
-137671  male
-12176   male
-91952   female
-47191   female
-137759  female
-81933   male
-103410  female
-...
+
+## Machine Learning Approach
+
+The project focuses on extracting meaningful features from raw text and applying supervised machine learning algorithms.
+
+Potential approaches include:
+
+- Text preprocessing and normalization
+- Bag-of-Words representation
+- TF-IDF feature extraction
+- Logistic Regression
+- Support Vector Machines (SVM)
+- Naive Bayes classification
+- Model comparison and optimization
+
+## Evaluation
+
+Classification models can be evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion matrix
+
+## Running the Project
+
+Install the dependencies:
+
+```bash
+pip install pandas numpy scikit-learn
 ```
 
-The filename for the predictions file should be like `a2-<method>.predictions`,
-where, `<method>` is a (short) string that identifies your approach.
-The method name you use for the file will be visible on the scoreboard
-(see below).
-You are recommended to use understandable method names.
-For example, if your method is based on a recurrent network,
-`rnn`  may be a good choice.
-You are encouraged to submit multiple sets of predictions
-(e.g., one with a traditional method, one with a neural method).
+Run an individual model:
 
-For each approach, the main Python script should be named `a2-<method>.py`.
-You are free to structure your code as multiple files
-(and share code across different approaches).
-However, the main file for each approach should be named as instructed above.
+```bash
+python a2-<method>.py
+```
 
-You are also provided with [a baseline](baseline.py) implementation of
-a simple linear regression model using scikit-learn library. The example
-also demonstrates the correct output format.
-**Do not** modify the baseline,
-even if you decide to improve on it, copy it to `a2-<method>.py`,
-and modify the new file.
+The script generates predictions in the required tab-separated format.
 
-You are welcome to use any method, tool or library of your choice.
-You can also make use of additional resources.
+## Learning Outcomes
 
-## Submissions and scoreboard
+This project demonstrates practical experience with:
 
-All assignments will be released through GitHub classroom.  The
-assignment link will be provided on [the private course
-repository](https://github.com/snlp2-2025/snlp2).
+- Transforming raw text into numerical representations
+- Extracting linguistic and textual features
+- Building supervised NLP classification pipelines
+- Applying machine learning to social media text
+- Evaluating classification models
+- Developing reproducible Python workflows
 
-For each assignment we will keep a scoreboard
-at [the private course repository](https://github.com/snlp2-2025/snlp2).
-Each team is required to submit at least one prediction before the deadline.
-You are welcome to submit new predictions as you improve your system
-(the scoreboard will be updated once a day).
-The scoreboard will show at most three (best) approaches from each team.
+## Academic Context
 
-All code you use for the assignments should be pushed to your
-assignment repository.
+Originally developed as part of a university assignment in Statistical Natural Language Processing (SNLP).
+
+The repository has been organized as a portfolio project to demonstrate practical NLP and machine learning skills.
+
+---
+
+**Technologies:** Python · NLP · Text Classification · Scikit-learn · TF-IDF · Machine Learning
